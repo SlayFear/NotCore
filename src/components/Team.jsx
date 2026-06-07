@@ -16,7 +16,7 @@ export default function Team() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="team" style={{ padding: '6rem 1.5rem' }}>
+    <section id="team" style={{ padding: 'clamp(3rem, 10vw, 6rem) 1.5rem' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <motion.div
           ref={ref}

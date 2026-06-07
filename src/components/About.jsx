@@ -13,7 +13,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="about" style={{ padding: '6rem 1.5rem', maxWidth: '1200px', margin: '0 auto' }} ref={ref}>
+    <section id="about" style={{ padding: 'clamp(3rem, 10vw, 6rem) 1.5rem', maxWidth: '1200px', margin: '0 auto' }} ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}

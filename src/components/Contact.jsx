@@ -7,7 +7,7 @@ export default function Contact() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="contact" style={{ padding: '6rem 1.5rem' }}>
+    <section id="contact" style={{ padding: 'clamp(3rem, 10vw, 6rem) 1.5rem' }}>
       <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }} ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -47,20 +47,22 @@ export default function Contact() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.75rem',
-                padding: '1rem 2.5rem',
+                padding: '1rem 1.5rem',
                 borderRadius: '0.75rem',
                 background: 'linear-gradient(135deg, #9B6FE8, #4F9EF0)',
                 color: '#fff',
                 fontWeight: 700,
                 textDecoration: 'none',
-                fontSize: '1.05rem',
+                fontSize: 'clamp(0.9rem, 2vw, 1.05rem)',
                 transition: 'transform 0.2s, opacity 0.2s',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
               }}
               onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.04)'}
               onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
             >
               <span>✉</span>
-              inge.luisgarza@gmail.com
+              <span style={{ whiteSpace: 'nowrap' }}>inge.luisgarza@gmail.com</span>
             </a>
 
             <p style={{ marginTop: '1.5rem', color: '#3A3A5A', fontSize: '0.8rem' }}>
